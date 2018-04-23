@@ -1,5 +1,4 @@
 #include <stdio.h>
-// Add your system includes here.
 #include<string.h>
 #include "ptree.h"
 #include <sys/stat.h>
@@ -154,9 +153,7 @@ int generate_ptree(struct TreeNode **root, pid_t pid) {
         cnode = strtok_r(childrenstr, " ", &saveptr);
 
         struct TreeNode * x;
-
         struct TreeNode * first = NULL;
-
         struct TreeNode * previous = NULL;
         
         while (cnode != NULL) {
@@ -247,150 +244,3 @@ void print_ptree(struct TreeNode *root, int max_depth) {
         }
     }
 }
-
-
-// int main(int argc, char**argv) {
-
-//     struct TreeNode root, d1n0, d1n1, d1n2, d1n3, d1n4, d1n5, d1n6, a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q;
-
-//     root.name = "sshd";
-//     root.pid = 1123;
-//     root.child_procs = &d1n0;
-//     root.next_sibling = NULL;
-
-//     d1n0.name = "sshd";
-//     d1n0.pid = 25914;
-//     d1n0.child_procs = &a;
-//     d1n0.next_sibling = &d1n1;
-
-//         a.name = "sshd";
-//         a.pid = 25987;
-//         a.child_procs = &b;
-//         a.next_sibling = NULL;
-
-//             b.name = "bash";
-//             b.pid = 25988;
-//             b.child_procs = &c;
-//             b.next_sibling = NULL;
-
-//                 c.name = "pstree";
-//                 c.pid = 1243;
-//                 c.child_procs = NULL;
-//                 c.next_sibling = NULL;
-
-//     d1n1.name = "sshd";
-//     d1n1.pid = 27395;
-//     d1n1.child_procs = &d;
-//     d1n1.next_sibling = &d1n2;
-
-//         d.name = "sshd";
-//         d.pid = 27468;
-//         d.child_procs = &e;
-//         d.next_sibling = NULL;
-
-//             e.name = "bash";
-//             e.pid = 27469;
-//             e.child_procs = NULL;
-//             e.next_sibling = NULL;
-
-//     d1n2.name = "sshd";
-//     d1n2.pid = 29462;
-//     d1n2.child_procs = &f;
-//     d1n2.next_sibling = &d1n3;
-
-//         f.name = "sshd";
-//         f.pid = 29498;
-//         f.child_procs = &g;
-//         f.next_sibling = NULL;
-
-//             g.name = "bash";
-//             g.pid = 29531;
-//             g.child_procs = NULL;
-//             g.next_sibling = NULL;
-
-
-//     d1n3.name = "sshd";
-//     d1n3.pid = 29499;
-//     d1n3.child_procs = &h;
-//     d1n3.next_sibling = &d1n4;
-
-//         h.name = "sshd";
-//         h.pid = 29529;
-//         h.child_procs = &i;
-//         h.next_sibling = NULL;
-
-//             i.name = "sftp-server";
-//             i.pid = 29530;
-//             i.child_procs = NULL;
-//             i.next_sibling = NULL;
-
-
-//     d1n4.name = "sshd";
-//     d1n4.pid = 29874;
-//     d1n4.child_procs = &j;
-//     d1n4.next_sibling = &d1n5;
-
-//         j.name = "sshd";
-//         j.pid = 29912;
-//         j.child_procs = &k;
-//         j.next_sibling = NULL;
-
-//             k.name = "bash";
-//             k.pid = 29913;
-//             k.child_procs = NULL;
-//             k.next_sibling = NULL;
-
-
-//     d1n5.name = "sshd";
-//     d1n5.pid = 30932;
-//     d1n5.child_procs = &l;
-//     d1n5.next_sibling = &d1n6;
-
-//         l.name = "sshd";
-//         l.pid = 30962;
-//         l.child_procs = &m;
-//         l.next_sibling = NULL;
-
-//             m.name = "sftp-server";
-//             m.pid = 30963;
-//             m.child_procs = NULL;
-//             m.next_sibling = &n;
-
-//             n.name = "sftp-server";
-//             n.pid = 30964;
-//             n.child_procs = NULL;
-//             n.next_sibling = &o;
-
-//             o.name = "sftp-server";
-//             o.pid = 30965;
-//             o.child_procs = NULL;
-//             o.next_sibling = NULL;
-
-
-
-//     d1n6.name = "sshd";
-//     d1n6.pid = 31511;
-//     d1n6.child_procs = &p;
-//     d1n6.next_sibling = NULL;
-
-//         p.name = "sshd";
-//         p.pid = 31547;
-//         p.child_procs = &q;
-//         p.next_sibling = NULL;
-
-//             q.name = "bash";
-//             q.pid = 31548;
-//             q.child_procs = NULL;
-//             q.next_sibling = NULL;
-
-//      print_ptree(&root, 0);
-//     // printf("\n");
-//     // print_ptree(&root, 4);
-
-//     // struct TreeNode * thing = &root;
-
-//     // generate_ptree(&thing, 1123);
-
-//     return 0;
-
-// }
