@@ -4,26 +4,6 @@
 #include <unistd.h>
 #include "ptree.h"
 
-/*void free_tree(struct TreeNode * root) {
-
-	//if this is fully a leaf node, we are safe to free
-	if (root->next_sibling == NULL && root->child_procs == NULL) {
-		free(root->name);
-		free(root);
-	}
-
-	else if (root->next_sibling == NULL) {
-		free_tree(root->child_procs);
-	}
-
-	else if (root->child_procs == NULL ) {
-		free_tree(root->next_sibling);
-	}
-
-}*/
-
-
-
 int main(int argc, char **argv) {
     // TODO: Update error checking and add support for the optional -d flag
     
@@ -107,9 +87,6 @@ int main(int argc, char **argv) {
 	if (root != NULL) {
 		print_ptree(root, depth);
 	}
-
-	//free_tree(root);
-
 	
 	return 0;
 
